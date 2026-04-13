@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 import { useState, useEffect, useMemo, useRef } from "react";
+import { motion } from "framer-motion";
 import {
   X,
   Menu,
@@ -11,8 +12,8 @@ import {
   Wrench,
   MapPin
 } from "lucide-react";
-import blackLogo from "../assets/black_hero_img.png";
 import whiteLogo from "../assets/white_hero_img.png";
+import handwave from "../assets/wavingHand.svg";
 
 const navLinks = [
   { label: "Home",     href: "#home",     icon: Home },
@@ -115,21 +116,38 @@ const NavBar = () => {
             })}
           </nav>
 
+          {/* <:
+             */}
+
           <div className="hidden md:flex items-center justify-end min-w-fit shrink-0">
              {active === "home" ?
-              <a href="https://www.google.com/maps/place/Apple+Service+Center+Nagole/@17.3523435,78.5466994,17z/data=!4m6!3m5!1s0x3bcba34e32205803:0x71952fa1ddb00de2!8m2!3d17.3523435!4d78.5466994!16s%2Fg%2F11ysj8px3l!18m1!1e1?entry=tts&g_ep=EgoyMDI2MDMxMS4wIPu8ASoASAFQAw%3D%3D&skid=4a3b6d35-bfc6-4611-8b5e-877feef85265"  
+                <a href="https://www.google.com/maps/place/Apple+Service+Center+Nagole/@17.3523435,78.5466994,17z/data=!4m6!3m5!1s0x3bcba34e32205803:0x71952fa1ddb00de2!8m2!3d17.3523435!4d78.5466994!16s%2Fg%2F11ysj8px3l!18m1!1e1?entry=tts&g_ep=EgoyMDI2MDMxMS4wIPu8ASoASAFQAw%3D%3D&skid=4a3b6d35-bfc6-4611-8b5e-877feef85265"  
                 className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-white text-black text-sm font-bold transition-all duration-300 hover:scale-105 hover:bg-zinc-200 active:scale-95 shadow-lg ease-in-out"
                 target="_blank"
                 rel="noopener noreferrer"
                 >
               <MapPin  size={14} strokeWidth={2.5} /> Navigate to Us
-            </a> :
+            </a>
+            :active === "contact" ? <span className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-white text-black text-sm font-bold transition-all duration-300 hover:scale-105 hover:bg-zinc-200 active:scale-95 shadow-lg ease-in-out">
+              <motion.img
+                src={handwave}
+                alt="welcome to iFix_Pro"
+                className="h-5 w-auto origin-bottom-right"
+                animate={{ rotate: [0, 14, -8, 14, -4, 10, 0, 0] }}
+                transition={{
+                  duration: 2.5,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+              />
+                Fast. Reliable. Done Right.
+            </span> :
             <a
               href="#contact"
               className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-white text-black text-sm font-bold transition-all duration-300 hover:scale-105 hover:bg-zinc-200 active:scale-95 shadow-lg ease-in-out"
-            >
-              <Wrench size={14} strokeWidth={2.5} /> Book Repair
-            </a> 
+              >
+                <Wrench size={14} strokeWidth={2.5} /> Book Repair
+            </a>
             }
           </div>
 
