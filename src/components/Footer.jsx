@@ -1,4 +1,7 @@
+import { useState } from "react";
 import { Mail, MapPin, Phone } from "lucide-react";
+
+import PopUp from "./PopUp";
 
 const PHONE = "+919000959812";
 const WHATSAPP_MSG = "Hi! I'd like to book a repair for my Apple device.";
@@ -14,6 +17,7 @@ const navLinks = [
 
 const Footer = () => {
   const year = new Date().getFullYear();
+  const [isPopUpOpen, setIsPopUpOpen] = useState(false);
 
   return (
     <footer className="bg-zinc-950 snap-start snap-always">
@@ -106,11 +110,17 @@ const Footer = () => {
                   </li>
                   <li>
                     <a
-                      href="mailto:hello@ifixpro.in"
                       className="flex items-center gap-2.5 text-zinc-500 text-xs hover:text-white transition-colors duration-150"
-                    >
+                      onClick={()=>{
+                        navigator.clipboard.writeText(" Applepremiumserviceprovider@gmail.com")
+                        setIsPopUpOpen(true);
+                        setInterval(() => {
+                          setIsPopUpOpen(false);
+                        }, 2000);
+                      }}
+                      >
                       <Mail size={13} strokeWidth={1.8} className="shrink-0" />
-                      hello@ifixpro.in
+                      Applepremiumserviceprovider@gmail.com
                     </a>
                   </li>
                 </ul>
@@ -130,6 +140,9 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      <PopUp isOpen={isPopUpOpen} onClose={() => {
+        setIsPopUpOpen(false);
+      }} text="Mail Copied to Clipboard" />
     </footer>
   );
 };
