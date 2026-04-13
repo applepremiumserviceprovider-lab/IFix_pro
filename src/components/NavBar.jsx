@@ -159,7 +159,6 @@ const NavBar = () => {
         }`}
       >
         <div className="flex items-center justify-between px-6 py-6 border-b border-white/10">
-          <img src={whiteLogo} alt="Logo" className="h-7 object-contain" />
           <button
             onClick={() => setMenuOpen(false)}
             className="p-2 rounded-full text-zinc-400 hover:text-white hover:bg-white/10 transition-colors"

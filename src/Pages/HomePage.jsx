@@ -133,7 +133,7 @@ const HomePage = () => {
           variants={stagger}
           className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3"
         >
-          <Stat icon={ShieldCheck} value="2-Year Warranty"  label="On every repair" />
+          <Stat icon={ShieldCheck} value="100 Days Warranty"  label="On every repair" />
           <Stat icon={Clock}       value="Same-Day Service" label="Most repairs in hours" />
           <Stat icon={Star}        value="4.9 / 5 Stars"    label="500+ happy customers" />
         </motion.div>

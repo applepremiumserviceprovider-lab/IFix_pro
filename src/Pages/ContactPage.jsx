@@ -51,7 +51,8 @@ const infoItems = [
   {
     icon: Clock,
     label: "Working Hours",
-    value: "Mon – Sat: 10:00 AM – 8:00 PM",
+    value: "Mon - Sat: 10:00 AM - 10:00 PM",
+    value2: "Sun: 11:00 AM - 8:00 PM"
   },
   {
     icon: MapPin,
@@ -129,7 +130,7 @@ const ContactPage = () => {
           transition={{ duration: 0.65, ease, delay: 0.22 }}
           className="grid grid-cols-1 sm:grid-cols-3 gap-3"
         >
-          {infoItems.map(({ icon: Icon, label, value }) => (
+          {infoItems.map(({ icon: Icon, label, value, value2 }) => (
             <div
               key={label}
               className="flex flex-col items-center gap-2 p-4 rounded-2xl bg-white/3 border border-white/[0.07] hover:bg-white/6 transition-colors duration-200"
@@ -139,6 +140,7 @@ const ContactPage = () => {
               </span>
               <p className="text-zinc-500 text-[10px] font-medium tracking-widest uppercase">{label}</p>
               <p className="text-zinc-300 text-xs text-center leading-relaxed">{value}</p>
+              <p className="text-zinc-300 text-xs text-center leading-relaxed -mt-2">{value2}</p>
             </div>
           ))}
         </motion.div>
