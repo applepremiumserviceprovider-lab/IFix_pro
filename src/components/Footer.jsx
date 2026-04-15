@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin, Phone,CodeXml,Code } from "lucide-react";
 
 import PopUp from "./PopUp";
 
@@ -55,9 +55,19 @@ const Footer = () => {
                   <Phone size={15} strokeWidth={2} />
                 </a>
                 <a
-                  href="mailto:hello@ifixpro.in"
+
                   aria-label="Email"
-                  className="w-8 h-8 rounded-lg bg-white/5 border border-white/8 flex items-center justify-center text-zinc-400 hover:text-white hover:bg-white/10 transition-all duration-150"
+                  className="w-8 h-8 rounded-lg bg-white/5 border
+                   border-white/8 flex items-center justify-center
+                    text-zinc-400 hover:text-white hover:bg-white/10 
+                    transition-all duration-150"
+                    onClick={()=>{
+                        navigator.clipboard.writeText(" Applepremiumserviceprovider@gmail.com")
+                        setIsPopUpOpen(true);
+                        setInterval(() => {
+                          setIsPopUpOpen(false);
+                        }, 2000);
+                      }}
                 >
                   <Mail size={13} strokeWidth={2} />
                 </a>
@@ -134,9 +144,13 @@ const Footer = () => {
             <p className="text-zinc-600 text-[11px] tracking-widest uppercase">
               © {year} iFix_Pro. All rights reserved.
             </p>
-            <p className="text-zinc-700 text-[11px]">
-              Hyderabad · Apple Device Repair Specialists
-            </p>
+            <a 
+            href="https://priyanshu-portfolio-v2.vercel.app"
+            className="text-zinc-700 text-[14px] flex justify-center items-center gap-[0.2rem] hover:text-violet-500 transition-colors duration-250 ease-in-out group">
+              {/* <Code size={13} strokeWidth={1.8} className="group-hover:text-violet-500"/> */}
+              Built by <span className="font-semibold">Priyanshu Kumar</span>
+              <CodeXml size={13} strokeWidth={1.8} className="group-hover:text-violet-500 transition-colors duration-150 ease-in-out group"/>
+            </a>
           </div>
         </div>
       </div>
