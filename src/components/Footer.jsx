@@ -1,5 +1,7 @@
+/* eslint-disable no-unused-vars */
 import { useState } from "react";
-import { Mail, MapPin, Phone,CodeXml,Code } from "lucide-react";
+import { Mail, MapPin, Phone,CodeXml,Code,Wrench } from "lucide-react";
+import { motion, useInView } from "framer-motion";
 
 import PopUp from "./PopUp";
 
@@ -144,13 +146,29 @@ const Footer = () => {
             <p className="text-zinc-600 text-[11px] tracking-widest uppercase">
               © {year} iFix_Pro. All rights reserved.
             </p>
-            <a 
-            href="https://priyanshu-portfolio-v2.vercel.app"
-            className="text-zinc-700 text-[14px] flex justify-center items-center gap-[0.2rem] hover:text-violet-500 transition-colors duration-250 ease-in-out group">
-              {/* <Code size={13} strokeWidth={1.8} className="group-hover:text-violet-500"/> */}
-              Built by <span className="font-semibold">Priyanshu Kumar</span>
-              <CodeXml size={13} strokeWidth={1.8} className="group-hover:text-violet-500 transition-colors duration-150 ease-in-out group"/>
-            </a>
+            <div className="border border-zinc-600 px-3 py-1  rounded-3xl group
+             hover:border-violet-500 transition-colors duration-150 ease-in-out
+             cursor-pointer overflow-hidden relative flex justify-start hover:w-auto"
+             
+             onClick={()=>{
+              window.open("https://priyanshu-portfolio-v2.vercel.app/","_blank");
+             }}
+             >
+              <p 
+                className="font-semibold text-zinc-700 text-[14px] flex justify-center 
+                items-center gap-[0.2rem] group-hover:text-violet-500 transition-colors
+                duration-250 ease-in-out group">
+                  {/* <Code size={13} strokeWidth={1.8} className="group-hover:text-violet-500"/> */}
+                  <div
+                    className="overflow-hidden flex items-center flex-col group"
+                  >                   
+                  </div>
+                  
+                  Built by <span>Priyanshu Kumar </span>
+                  <CodeXml size={15} strokeWidth={1.8} className="group-hover:text-violet-500 
+                    transition-colors duration-150 ease-in-out "/>
+              </p>
+            </div>
           </div>
         </div>
       </div>
