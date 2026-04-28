@@ -58,7 +58,7 @@ const infoItems = [
   {
     icon: MapPin,
     label: "Location",
-    value: "Apple Service Center, Nagole, Hyderabad",
+    value: "Apple service center iFix Pro",
   },
   {
     icon: Mail,
