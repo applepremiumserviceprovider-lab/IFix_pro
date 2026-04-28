@@ -13,7 +13,7 @@ const fadeUp = {
 
 const PHONE = "+919000959812";
 const WHATSAPP_MSG = "Hi! I'd like to book a repair for my Apple device.";
-const MAPS_URL = "https://www.google.com/maps/place/Apple+Service+Center+Nagole/@17.3523435,78.5466994,17z/data=!4m6!3m5!1s0x3bcba34e32205803:0x71952fa1ddb00de2!8m2!3d17.3523435!4d78.5466994!16s%2Fg%2F11ysj8px3l!18m1!1e1?entry=ttu&g_ep=EgoyMDDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D";
+const MAPS_URL = "https://www.google.com/maps/place/Apple+service+center+iFix+Pro/@17.3523405,78.5467001,17z/data=!3m1!4b1!4m6!3m5!1s0x3bcb99a655743bb9:0xde81b8dcb1dfe4b1!8m2!3d17.3523405!4d78.5467001!16s%2Fg%2F11z1fmyk_l!18m1!1e1?entry=ttu&g_ep=EgoyMDI2MDQyMi4wIKXMDSoASAFQAw%3D%3D";
 
 const actions = [
   {
