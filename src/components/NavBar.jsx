@@ -121,7 +121,7 @@ const NavBar = () => {
 
           <div className="hidden md:flex items-center justify-end min-w-fit shrink-0">
              {active === "home" ?
-                <a href="https://www.google.com/maps/place/Apple+Service+Center+Nagole/@17.3523435,78.5466994,17z/data=!4m6!3m5!1s0x3bcba34e32205803:0x71952fa1ddb00de2!8m2!3d17.3523435!4d78.5466994!16s%2Fg%2F11ysj8px3l!18m1!1e1?entry=tts&g_ep=EgoyMDI2MDMxMS4wIPu8ASoASAFQAw%3D%3D&skid=4a3b6d35-bfc6-4611-8b5e-877feef85265"  
+                <a href="https://www.google.com/maps/place/Apple+service+center+iFix+Pro/@17.3523405,78.5467001,17z/data=!3m1!4b1!4m6!3m5!1s0x3bcb99a655743bb9:0xde81b8dcb1dfe4b1!8m2!3d17.3523405!4d78.5467001!16s%2Fg%2F11z1fmyk_l!18m1!1e1?entry=ttu&g_ep=EgoyMDI2MDQyMi4wIKXMDSoASAFQAw%3D%3D"  
                 className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-white text-black text-sm font-bold transition-all duration-300 hover:scale-105 hover:bg-zinc-200 active:scale-95 shadow-lg ease-in-out"
                 target="_blank"
                 rel="noopener noreferrer"
